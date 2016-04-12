@@ -1,11 +1,11 @@
-FROM ubuntu:12.04
+FROM ubuntu:14.01
 
-RUN apt-get -y update fix-missing
-RUN apt-get install -y python3-pip python-dev libev4 libev-dev gcc libxslt-dev libxml2-dev libffi-dev vim curl
-RUN apt-get install --upgrade pip3
+RUN apt-get -y update --fix-missing
+RUN apt-get install -y python3-pip python-dev libev4 libev-dev gcc libxslt-dev libxml2-dev libffi-dev
 
 # install dependency
-RUN python3 -r requirements.txt
+RUN apt-get install -y python-numpy python-scipy
+RUN pip3 install -r requirements.txt
 
 # add project
 ADD . /
@@ -14,4 +14,4 @@ ADD . /
 EXPOSE 5000
 
 # run the API
-CMD [""]
+CMD ["python", "/predict_api.py"]
