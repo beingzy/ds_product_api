@@ -27,6 +27,6 @@ def predict(input_features):
     return predict_label
 
 
-if __name__ == "__main__":
-    input_obs = np.array([ 5.1,  3.5,  1.4,  0.2]).reshape(1, -1)
-    print(predict(input_obs))
+#if __name__ == "__main__":
+#    input_obs = np.array([ 5.1,  3.5,  1.4,  0.2]).reshape(1, -1)
+#    print(predict(input_obs))
