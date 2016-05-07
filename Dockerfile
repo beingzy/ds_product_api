@@ -9,4 +9,4 @@ ADD . /
 EXPOSE 5000
 
 # run the API
-CMD ["python3", "./main/predict_api.py"]
+CMD ["python3", "/main/predict_api.py"]
