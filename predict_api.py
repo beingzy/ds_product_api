@@ -18,6 +18,7 @@ class HelloPage(Resource):
     def get(self):
         return "Hello, World!"
 
+
 class Prediction(Resource):
 
     def get(self):

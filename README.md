@@ -14,7 +14,7 @@ docker build --force-rm=true -tag container_name .
 
 ### fire up the container as a service
 ```bash
-docker run --net host --name service_name container_name
+docker run --net host --p 5000:5000 --name service_name container_name
 ```
 
 ## example for querying the api
